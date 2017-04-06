@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct elemento{
+	char placa[24];
+	
+} t_elemento;
+
+typedef struct plh {
+	t_elemento vetor[3];
+	int topo;
+} t_pilha;
+
+int push(t_pilha *pilha, t_elemento valor)
+{
+   // if (isCheia(pilha))
+   //    return 0; // erro
+
+    pilha->vetor[++pilha->topo] = valor;
+
+    return 1; // sucesso
+}
+
+
+entracarros(t_pilha * plh){
+ 	
+ 	t_elemento dado;
+ 	// pegar placa e guardar na pilha 3 vezes
+ 	// loop 3 vezes 
+ 	// pega placa em um t_elemento local (no dado)
+ 	scanf("%s", &dado.placa);
+ 	// guarda na pilha (usa funçao push() )
+ 	push(plh, dado);
+ }
+ 
+
+
+int main(){
+	
+	t_pilha pilha;
+	pilha.topo = -1;
+	int i;
+	//
+	
+	entracarros(&pilha);
+	
+	//
+	i = pilha.topo;
+	//printf("%s", pilha.vetor[pilha.topo].placa);
+	printf("%s", pilha.vetor[i].placa);
+	//
+	
+	//
+	
+	printf("%d", pilha.topo + 1);
+}
